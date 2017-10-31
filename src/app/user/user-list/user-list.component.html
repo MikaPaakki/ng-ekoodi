@@ -2,6 +2,15 @@
   User list!
 </p>
 
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Etunimi"[(ngModel)]="newUser.firstName">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Sukunimi"[(ngModel)]="newUser.lastName">
+</mat-form-field>
+
+<button mat-raised-button (click)="addNewUser()">Add</button>
 
 <mat-list>
   <h3 matSubheader>Users</h3>

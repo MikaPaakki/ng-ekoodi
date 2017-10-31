@@ -21,5 +21,4 @@ export class AppComponent {
   onUserSelected(user: User){
     console.log(user);
   }
-
 }

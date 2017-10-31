@@ -4,11 +4,9 @@
 
 <input [(ngModel)]="selectedUserName">
 
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Nimi" [(ngModel)]="selectedUserName">
-  </mat-form-field>
 
-<button mat-raised-button (click)="changeName()">Change</button>
+
+
 <ekoodi-user-list (userSelected)="onUserSelected($event)"></ekoodi-user-list>
 
 <button mat-icon-button color="primary">
