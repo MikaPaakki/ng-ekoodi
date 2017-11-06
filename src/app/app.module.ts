@@ -10,6 +10,7 @@ import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@an
 import {UserService} from './user/user.service';
 import {RouterModule, Routes} from '@angular/router';
 import { AddUserComponent } from './user/add-user/add-user.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     MatInputModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FlexLayoutModule
   ],
   providers: [
     UserService
