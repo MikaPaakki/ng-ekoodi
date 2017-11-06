@@ -4,10 +4,7 @@
 
 <input [(ngModel)]="selectedUserName">
 
-
-
-
-<ekoodi-user-list (userSelected)="onUserSelected($event)"></ekoodi-user-list>
+<!--<ekoodi-user-list (userSelected)="onUserSelected($event)"></ekoodi-user-list>-->
 
 <button mat-icon-button color="primary">
   <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
@@ -16,3 +13,8 @@
 <button mat-fab>
   <mat-icon aria-label="Example icon-button with a heart icon">alarm on</mat-icon>
 </button>
+
+<button mat-raised-button (click)="showUserList()">User list</button>
+<button mat-raised-button (click)="showAddUser()">Add User</button>
+
+<router-outlet></router-outlet>

@@ -8,13 +8,27 @@ import { UserInfoComponent } from './user/user-info/user-info.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
 import {UserService} from './user/user.service';
+import {RouterModule, Routes} from '@angular/router';
+import { AddUserComponent } from './user/add-user/add-user.component';
+
+const routes: Routes = [
+  {
+    path: 'add-user',
+    component: AddUserComponent
+  },
+  {
+    path: 'users',
+    component: UserListComponent
+  }
+]
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    AddUserComponent
 
 
   ],
@@ -25,7 +39,8 @@ import {UserService} from './user/user.service';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     UserService
